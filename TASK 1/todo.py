@@ -46,7 +46,7 @@ root.title("To-Do List Application")
 root.geometry("400x400")
 
 # Create an entry widget for task input
-entry = tk.Entry(root, width=30)
+entry = tk.Entry(root, width=30, justify='center')
 entry.pack(pady=10)
 
 # Create buttons for various actions
