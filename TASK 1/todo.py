@@ -9,6 +9,13 @@ def add_task():
     else:
         messagebox.showwarning("Warning", "Please enter a Task.")
 
+def delete_task():
+    selected_task_index = listbox.curselection()
+    if selected_task_index:
+        listbox.delete(selected_task_index)
+    else:
+        messagebox.showwarning("Warning", "Please select the task to be deleted.")
+
 def edit_task():
     selected_task_index = listbox.curselection()
     if selected_task_index:
@@ -20,13 +27,6 @@ def edit_task():
         entry.delete(0, tk.END)
     else:
         messagebox.showwarning("Warning", "Please select a task.")
-
-def delete_task():
-    selected_task_index = listbox.curselection()
-    if selected_task_index:
-        listbox.delete(selected_task_index)
-    else:
-        messagebox.showwarning("Warning", "Please select the task to be deleted.")
 
 def mark_completed():
     selected_task_index = listbox.curselection()
