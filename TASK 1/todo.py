@@ -6,6 +6,8 @@ def add_task():
     if task:
         listbox.insert(tk.END, task)
         entry.delete(0, tk.END)
+    else:
+        messagebox.showwarning("Warning", "Please enter a Task.")
 
 def edit_task():
     selected_task_index = listbox.curselection()
